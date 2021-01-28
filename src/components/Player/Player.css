@@ -1,0 +1,18 @@
+.player {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.rhap_container {
+    background: transparent;
+    box-shadow: none;
+}
+
+.rhap_time {
+    color: white;
+}
+
+button {
+    color: white;
+}

@@ -1,13 +1,14 @@
 import Album from './components/Album/Album';
 
 import './App.css';
+import Player from './components/Player/Player';
 
 function App() {
     return (
         <div className="app">
             <Album />
-            {/* // // player //
-      // next song */}
+            <Player />
+            {/* next song  */}
         </div>
     );
 }
