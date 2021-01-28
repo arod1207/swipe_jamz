@@ -1,0 +1,11 @@
+.album {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.album .album__cover img {
+    max-width: 450px;
+    border-radius: 15px;
+}
