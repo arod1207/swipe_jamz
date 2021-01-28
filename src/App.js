@@ -1,14 +1,17 @@
+import SearchBar from './components/SearchBar/SearchBar';
 import Album from './components/Album/Album';
+import Player from './components/Player/Player';
+import Playlist from './components/Playlist/Playlist';
 
 import './App.css';
-import Player from './components/Player/Player';
 
 function App() {
     return (
         <div className="app">
+            <SearchBar />
             <Album />
             <Player />
-            {/* next song  */}
+            <Playlist />
         </div>
     );
 }

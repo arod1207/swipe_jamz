@@ -10,7 +10,7 @@ const Album = () => {
                 <img src={album1} alt="" />
             </div>
             <div className="album__name">
-                <p>Calm Down</p>
+                <h2>Calm Down</h2>
             </div>
         </div>
     );

@@ -2,10 +2,10 @@
     width: 500px;
     margin: 30px auto;
     overflow: auto;
-    max-height: 900px;
+    max-height: 800px;
     height: 100vh;
     border: 2px solid rgb(126, 144, 158);
-    padding: 30px;
     border-radius: 15px;
     background: transparent;
+    position: relative;
 }

@@ -6,8 +6,6 @@ import './Player.css';
 import Song from '../../Assets/Songs/Elvis_Presley_Jailhouse_Rock.mp3';
 
 const Player = () => {
-    const playSong = () => {};
-
     return (
         <div className="player">
             <AudioPlayer

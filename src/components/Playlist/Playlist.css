@@ -1,0 +1,13 @@
+.playlist {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 70px;
+}
+
+.playlist__song {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5rem;
+    color: white;
+}

@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     margin-top: 2rem;
+    padding: 30px;
 }
 
 .rhap_container {
@@ -13,6 +14,10 @@
     color: white;
 }
 
-button {
-    color: white;
+.rhap_progress-filled {
+    background: #f10d0d;
+}
+
+.rhap_download-progress {
+    color: black;
 }
