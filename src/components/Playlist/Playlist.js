@@ -1,12 +1,22 @@
+import React, { useContext } from 'react';
+
+import { SongContext } from '../../SongContext';
+
 import './Playlist.css';
 
 const Playlist = () => {
+    const { songs } = useContext(SongContext);
+
     return (
-        <div className="playlist">
-            <div className="playlist__song">
-                <p>I am playlist</p>
-            </div>
-        </div>
+        <>
+            {songs.map((song) => (
+                <div className="playlist">
+                    <div className="playlist__song">
+                        <p>{song.title[0]}</p>
+                    </div>
+                </div>
+            ))}
+        </>
     );
 };
 

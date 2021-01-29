@@ -1,7 +1,7 @@
 .app {
     width: 500px;
     margin: 30px auto;
-    overflow: auto;
+    overflow: none;
     max-height: 800px;
     height: 100vh;
     border: 2px solid rgb(126, 144, 158);
