@@ -9,31 +9,27 @@ import './Player.css';
 
 const Player = () => {
     const { songs } = useContext(SongContext);
-    // const [playing, setPlaying] = useState(false);
-    console.log(songs.id);
+    const [currentSong, setCurrentSong] = useState(0);
 
-    console.log(songs);
+    const song = songs[currentSong];
+
+    if (!song) return null; // don't render the player when no song is available
 
     return (
-        <>
-            {songs.length > 0 &&
-                songs.map((song) => (
-                    <div className="player" key={song.id}>
-                        <AudioPlayer
-                            // autoPlay
-                            src={song.preview}
-                            showJumpControls={false}
-                            customVolumeControls={[]}
-                            customAdditionalControls={[]}
-                            onPlay={(e) => console.log('playing')}
-
-                            // other props here
-                        />
-                    </div>
-                ))}
-        </>
+        <div className="player">
+            <AudioPlayer
+                autoPlay
+                src={song.preview}
+                showJumpControls={false}
+                customVolumeControls={[]}
+                customAdditionalControls={[]}
+                onPlay={() => console.log('playing')}
+                onEnded={() => setCurrentSong((i) => i + 1)}
+            />
+        </div>
     );
 };
+
 export default Player;
 
 /* <i class="fas fa-pause-circle fa-3x"></i> */
