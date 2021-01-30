@@ -4,6 +4,7 @@ import Player from './components/Player/Player';
 // import Playlist from './components/Playlist/Playlist';
 
 import { SongProvider } from '../src/SongContext';
+import { SkipProvider } from '../src/SkipContext';
 
 import './App.css';
 
@@ -12,8 +13,11 @@ function App() {
         <SongProvider>
             <div className="app">
                 <SearchBar />
-                <Album />
-                <Player />
+                <SkipProvider>
+                    <Album />
+                    <Player />
+                </SkipProvider>
+
                 {/* <Playlist /> */}
             </div>
         </SongProvider>
