@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { SongContext } from '../../SongContext';
 import { SkipContext } from '../../SkipContext';
 
@@ -10,17 +10,9 @@ import './Player.css';
 
 const Player = () => {
     const { songs } = useContext(SongContext);
-    const { direction } = useContext(SkipContext);
-    const [currentSong, setCurrentSong] = useState(0);
-
-    console.log('👦🏾', direction);
+    const { currentSong, setCurrentSong } = useContext(SkipContext);
 
     const song = songs[currentSong];
-    const nextSong = songs[currentSong + 1];
-
-    console.log(nextSong);
-
-    console.log(currentSong);
 
     if (!song) return null; // don't render the player when no song is available
 
@@ -28,7 +20,7 @@ const Player = () => {
         <div className="player">
             <AudioPlayer
                 // autoPlay
-                src={direction === 'right' ? nextSong.preview : song.preview}
+                src={song.preview} // this isnt working
                 showSkipControls={true}
                 customVolumeControls={[]}
                 customAdditionalControls={[]}
@@ -44,8 +36,3 @@ export default Player;
 
 /* <i class="fas fa-pause-circle fa-3x"></i> */
 // }<i class="fas fa-play-circle fa-3x"></i>
-// direction === 'right'
-//                         ? nextSong.preview
-//                         : direction === 'left '
-//                         ? previousSong.preview
-//                         : song.preview
