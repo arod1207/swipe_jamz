@@ -4,6 +4,8 @@ import { SkipContext } from '../../SkipContext';
 
 import SwipeCard from 'react-tinder-card';
 
+import defaultCD from '../../Assets/Images/defualtAlbum.jpg';
+
 import './Album.css';
 
 const Album = () => {
@@ -25,7 +27,7 @@ const Album = () => {
 
     return (
         <>
-            {songs.length > 0 &&
+            {songs.length > 0 ? (
                 songs.map((song) => (
                     <SwipeCard
                         key={song.id}
@@ -41,7 +43,15 @@ const Album = () => {
                             </div>
                         </div>
                     </SwipeCard>
-                ))}
+                ))
+            ) : (
+                <div className="album">
+                    <div className="album__cover">
+                        <img src={defaultCD} alt="" />
+                    </div>
+                    <div className="album__name"></div>
+                </div>
+            )}
         </>
     );
 };

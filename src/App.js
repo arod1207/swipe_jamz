@@ -1,7 +1,7 @@
 import SearchBar from './components/SearchBar/SearchBar';
 import Album from './components/Album/Album';
 import Player from './components/Player/Player';
-// import Playlist from './components/Playlist/Playlist';
+import Playlist from './components/Playlist/Playlist';
 
 import { SongProvider } from '../src/SongContext';
 import { SkipProvider } from '../src/SkipContext';
@@ -16,9 +16,8 @@ function App() {
                 <SkipProvider>
                     <Album />
                     <Player />
+                    <Playlist />
                 </SkipProvider>
-
-                {/* <Playlist /> */}
             </div>
         </SongProvider>
     );

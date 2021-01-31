@@ -5,7 +5,6 @@ import { SkipContext } from '../../SkipContext';
 import AudioPlayer from 'react-h5-audio-player';
 
 import 'react-h5-audio-player/lib/styles.css';
-
 import './Player.css';
 
 const Player = () => {
@@ -14,20 +13,24 @@ const Player = () => {
 
     const song = songs[currentSong];
 
-    if (!song) return null; // don't render the player when no song is available
-
     return (
         <div className="player">
-            <AudioPlayer
-                // autoPlay
-                src={song.preview} // this isnt working
-                showSkipControls={true}
-                customVolumeControls={[]}
-                customAdditionalControls={[]}
-                onPlay={() => console.log('playing')}
-                onEnded={() => setCurrentSong((i) => i + 1)}
-                onClickNext={() => setCurrentSong((i) => i + 1)}
-            />
+            {!song ? (
+                <AudioPlayer
+                    customVolumeControls={[]}
+                    customAdditionalControls={[]}
+                ></AudioPlayer>
+            ) : (
+                <AudioPlayer
+                    // autoPlay
+                    src={song.preview}
+                    customVolumeControls={[]}
+                    customAdditionalControls={[]}
+                    onPlay={() => console.log('playing')}
+                    onEnded={() => setCurrentSong((i) => i + 1)}
+                    onClickNext={() => setCurrentSong((i) => i + 1)}
+                />
+            )}
         </div>
     );
 };
