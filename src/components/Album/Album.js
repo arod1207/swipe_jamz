@@ -38,9 +38,11 @@ const Album = () => {
                             <div className="album__cover">
                                 <img src={song.album.cover_big} alt="" />
                             </div>
+
+                            {/* removing for now
                             <div className="album__name">
                                 <h3>{song.title}</h3>
-                            </div>
+                            </div> */}
                         </div>
                     </SwipeCard>
                 ))

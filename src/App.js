@@ -2,6 +2,7 @@ import SearchBar from './components/SearchBar/SearchBar';
 import Album from './components/Album/Album';
 import Player from './components/Player/Player';
 import Playlist from './components/Playlist/Playlist';
+import Title from './components/Title/TItle';
 
 import { SongProvider } from '../src/SongContext';
 import { SkipProvider } from '../src/SkipContext';
@@ -15,7 +16,9 @@ function App() {
                 <SearchBar />
                 <SkipProvider>
                     <Album />
+
                     <Player />
+
                     <Playlist />
                 </SkipProvider>
             </div>

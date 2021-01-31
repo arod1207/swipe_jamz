@@ -19,6 +19,7 @@ const Player = () => {
                 <AudioPlayer
                     customVolumeControls={[]}
                     customAdditionalControls={[]}
+                    showJumpControls={false}
                 ></AudioPlayer>
             ) : (
                 <AudioPlayer
@@ -28,7 +29,7 @@ const Player = () => {
                     customAdditionalControls={[]}
                     onPlay={() => console.log('playing')}
                     onEnded={() => setCurrentSong((i) => i + 1)}
-                    onClickNext={() => setCurrentSong((i) => i + 1)}
+                    showJumpControls={false}
                 />
             )}
         </div>

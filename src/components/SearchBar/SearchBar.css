@@ -21,3 +21,9 @@
 .searchbar__input input:focus {
     outline: none;
 }
+
+@media only screen and (max-width: 500px) {
+    input[type='text'] {
+        font-size: inherit;
+    }
+}
