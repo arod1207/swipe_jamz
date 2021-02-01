@@ -1,6 +1,6 @@
 # Swipe Jamz
 
-## Music play that plays 30 second clips of your favorite songs
+## Music player that plays 30 second clips of your favorite songs
 
 ### The goal of this project was to practice using React hooks, in particular the Context API to manage state.
 
