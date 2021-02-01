@@ -1,6 +1,8 @@
 import { useContext } from 'react';
 import { SongContext } from '../../SongContext';
 
+import { TextField } from '@material-ui/core';
+
 import './SearchBar.css';
 
 const SearchBar = () => {
@@ -10,7 +12,10 @@ const SearchBar = () => {
         <div className="searchbar">
             <form onSubmit={searchHandler}>
                 <div className="searchbar__input">
-                    <input
+                    <TextField
+                        id="outlined-basic"
+                        label="Search"
+                        variant="outlined"
                         type="text"
                         placeholder="Search"
                         value={search}
