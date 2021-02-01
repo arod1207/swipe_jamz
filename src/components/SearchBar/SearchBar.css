@@ -15,6 +15,7 @@
     color: white;
     text-transform: uppercase;
     font-weight: bold;
+    color: black;
 }
 
 .searchbar__input input:focus {
