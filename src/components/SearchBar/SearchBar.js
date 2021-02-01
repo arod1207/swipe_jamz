@@ -15,7 +15,6 @@ const SearchBar = () => {
                     <TextField
                         id="outlined-basic"
                         label="Search"
-                        variant="outlined"
                         type="text"
                         placeholder="Search"
                         value={search}

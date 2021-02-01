@@ -10,6 +10,10 @@ export const SongProvider = ({ children }) => {
     const searchHandler = (e) => {
         e.preventDefault();
 
+        if (search === '') {
+            return;
+        }
+
         const options = {
             method: 'GET',
             url: 'https://deezerdevs-deezer.p.rapidapi.com/search',

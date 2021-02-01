@@ -9,6 +9,7 @@
 .rhap_container {
     background: transparent;
     box-shadow: none;
+    margin-top: 30px;
 }
 
 .rhap_time {
@@ -21,4 +22,8 @@
 
 .rhap_download-progress {
     color: black;
+}
+
+button {
+    color: white;
 }
